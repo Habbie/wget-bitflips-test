@@ -6,8 +6,8 @@ jobs:
   wget:
     runs-on: ubuntu-20.04
     steps:
-    - name: get file 1 times
-      run: for i in {0..1} ; do wget http://repo.powerdns.com/ubuntu/pool/main/p/pdns/pdns-server_4.4.3-1pdns.focal_amd64.deb ; sleep 3 ; done
+    - name: get file 100 times
+      run: for i in {0..100} ; do wget http://repo.powerdns.com/ubuntu/pool/main/p/pdns/pdns-server_4.4.3-1pdns.focal_amd64.deb ; sleep 3 ; done
     - name: tar it up
       run: tar cjf /tmp/wget.tar.bz2 .
     - name: Upload 
